@@ -1,26 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Route, withRouter} from "react-router-dom"
+import {connect} from "react-redux";
+import {compose} from "redux";
+import Header from "./components/Header/Header";
+import Login from "./components/Login/Login";
+import Cookies from "js-cookie";
+import {logOut, setIsAuth} from "./redux/auth-reducer";
+import UsersContainer from "./components/Users/UsersContainer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+    componentDidMount() {
+        const token = Cookies.get('token');
+        if (token) {
+            this.props.setIsAuth(true);
+        }
+    }
+    render() {
+
+        return (
+            <BrowserRouter>
+                <div className='app-wrapper'>
+                    <Header isAuth={this.props.isAuth} logOut={this.props.logOut}/>
+                    <div className='app-wrapper-content'>
+                        <Route path='/users'
+                               render={() => <UsersContainer/>}/>
+                        <Route path='/login'
+                               render={() => <Login/>}/>
+                    </div>
+                </div>
+            </BrowserRouter>);
+    }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+    isAuth: state.auth.isAuth,
+    login: state.auth.login,
+});
+
+export default compose(withRouter, connect(mapStateToProps, {setIsAuth, logOut}))(App);

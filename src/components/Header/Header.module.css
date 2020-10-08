@@ -1,0 +1,64 @@
+.header {
+    grid-area: h;
+    background-color: #55608f;
+    margin-bottom: 10px;
+}
+.header img {
+    padding: 0 20px;
+    width: 80px;
+    height: 60px;
+}
+
+.loginBlock {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginBlock a {
+    color: white;
+}
+
+.loginOrOut {
+    margin: 13px;
+    font-size: 20px;
+    font-weight: 500;
+    height: 30px;
+    min-width: 180px;
+    color: #2a5885;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+}
+
+.loginOrOut:hover {
+    background-color: #eeeef1;
+}
+
+
+.item {
+    margin: 13px;
+    font-size: 20px;
+    font-weight: 500;
+    height: 30px;
+    min-width: 180px;
+    color: #2a5885;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+}
+
+.item:hover {
+    background-color: #eeeef1;
+}
+
+.item a{
+    color: #2a5885;
+    text-decoration: none;
+}

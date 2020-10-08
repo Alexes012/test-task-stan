@@ -1,0 +1,51 @@
+.containerForAll {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+.wrapperForEditMod {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.button button{
+    background-color: #55608f;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 20px;
+    margin: 30px 20px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.button button:hover {
+    background-color: #2e365c;
+}
+
+.button button:focus {
+    outline: none;
+}
+
+/*.field {*/
+/*    width: 90px;*/
+/*    border: none;*/
+/*}*/
+
+/*.field:focus {*/
+/*    outline: none;*/
+/*    border-bottom: 1px solid black;*/
+/*}*/

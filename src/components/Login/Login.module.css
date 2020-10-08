@@ -1,0 +1,38 @@
+.formAuth {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonWrapper button{
+    background-color: #55608f;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 20px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.buttonWrapper button:hover{
+    background-color: #2e365c;
+
+}
+.buttonWrapper button:focus {
+    outline: none;
+}

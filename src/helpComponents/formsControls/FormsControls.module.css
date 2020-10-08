@@ -1,0 +1,25 @@
+.input {
+    /*padding: 10px;*/
+    outline: none;
+    border: none;
+    color: #080232;
+    font-size: 15px;
+    font-weight: 500;
+    width: 400px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #080232;
+}
+.formControl.error input,
+.formControl.error textarea {
+    border-bottom: 2px solid red;
+}
+
+.formControl.error span {
+    color: red;
+}
+
+.formSumError {
+    border: 1px solid red;
+    padding: 5px;
+    color: red;
+}
